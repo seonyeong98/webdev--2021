@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+        /*column은 세로로 row 가로*/
+            flex-wrap: wrap;
+        }
+        li{
+            felx: 1;
+            background-color: antiquewhite;
+        }
+        li:first-child{
+            background-color: brown;
+        }
+        li:last-child{
+            order: -1;
+            /*flex: 1 0 500px;*/
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 800px;
+            background-color: olive;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>license.html</li>
+    <li>shortcult.html</li>
+    <li>else.html</li>
+</ul>
+</body>
+</html>
