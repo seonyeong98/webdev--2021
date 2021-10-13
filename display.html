@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            height: 100px;
+            background-color: olive;
+        }
+        main{
+           border: 1px solid brown;
+            background-color: orange;
+            /*height: 500px;*/
+        }
+        .clearfix:after{
+            /*메인의 맨 뒤에 빈 콘텐트를 넣고~*/
+            content: "";
+            display:table;
+            table-layout: fixed;
+            clear: both;
+        }
+        section, aside{
+            float: left;
+            height: 100%;
+        }
+        section{
+            border: 1px solid brown;
+        }
+        aside{
+            border: 1px solid black;
+        }
+        footer{
+            background-color: aqua;
+            height: 100px;
+        }
+        nav ul{
+
+        }
+        nav ul li{
+            padding: 10px;
+            float: left;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        header
+        <nav>
+            <ul class="clearfix">
+                <li><a href="license.html">license</a></li>
+                <li><a href="shortcut.html">shortcut</a></li>
+                <li><a href="else.html">else</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="clearfix">
+        <section>section</section>
+        <aside>aside</aside>
+    </main>
+    <footer>footer</footer>
+</div>
+
+</body>
+</html>
