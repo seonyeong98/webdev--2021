@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html.body{
+    font-size: 28px;
+}
+.wrapper{
+    border: 2px solid rebeccapurple;
+    width: 100vw;
+    height: 50vh;
+    background-color: darkgray;
+}
+
+.wrapper2{
+    font-size: 2em;
+}
+
+.inner-wrapper{
+    font-size: 2rem;
+/*rootem root의 2배 ex)2rem*/
+}
