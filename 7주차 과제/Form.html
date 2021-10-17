@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<h1>프론트엔드 개발자 지원서</h1>
+<p>HTML, CSS, JAVASCRIPT에 대한 기술적 이해와 많은 경험이 있는분을 찾습니다.</p>
+<hr>
+<form>
+<fieldset>
+    <legend>입사지원서</legend>
+    <br>
+    <div>
+        <span><strong>개인정보</strong></span>
+        <ul>
+            <li>이름<input type="text"></li>
+            <li>연락처<input type="text"></li>
+            <li>학과
+                <select id="major=select">
+                    <optgroup label ="공과대학">
+                        <option>컴퓨터공학과</option>
+                        <option>전기공학과</option>
+                        <option>기계공학과</option>
+                    </optgroup>
+                    <optgroup label="사범대학">
+                        <option>컴퓨터교육과</option>
+                        <option>전산통계학과</option>
+                    </optgroup>
+                    <optgroup label ="기타">
+                        <option>유아교육과</option>
+                    </optgroup>
+                </select>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <span><strong>지원분야</strong></span>
+    <ul>
+        <li><input type="radio">웹 퍼블리싱</li>
+        <li><input type="radio">웹 어플리케이션</li>
+        <li><input type="radio">웹 개발 지원</li>
+    </ul>
+    </div>
+    <span><strong>지원동기</strong></span>
+    <div>
+        <br>
+    <textarea rows="10" cols="50">지원동기를 작성해주세요.</textarea>
+    </div>
+<input type="submit" value="접수하기">
+<input type="reset" value="다시작성">
+
+</fieldset>
+</form>
+</body>
+</html>
