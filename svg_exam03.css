@@ -1,0 +1,157 @@
+@charset "utf-8";
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*써니매직 로고*/
+.logowrapper {
+    width: 263px;
+    height: 106px;
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FA682A;
+}
+
+
+.logowrapper path{
+    animation: magic 0.8s linear forwards;
+    transform-origin: center;
+}
+
+/*3:매직 4:써니 2:stroke 5:ㅅ*/
+
+.logowrapper path:nth-child(1){
+    fill: white;
+    stroke: #FF5733;
+
+}
+
+.logowrapper path:nth-child(2){
+    stroke-dasharray: 100;
+    stroke-dashoffset: 400;
+    stroke: white;
+    stroke-width: 1;
+}
+
+.logowrapper path:nth-child(3){
+    fill: black;
+}
+
+
+
+@keyframes magic {
+    0%{
+        fill: none;
+    }
+
+    50%{
+        nth-child(1).stroke-dasharray: 50;
+        nth-child(1).stroke-dashoffset: 50;
+        fill: none;
+    }
+
+    100%{
+        stroke-dashoffset: 100;
+        stroke: white;
+    }
+}
+
+/*태양이 돈이 되는 매직*/
+.textwrapper {
+    width: 246px;
+    height: 36px;
+    position: relative;
+    display: block;
+    background-color: #FA682A;
+    border: unset;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    size: 24px;
+}
+.textwrapper path{
+    animation: end 0.2s linear forwards;
+}
+
+@keyframes end {
+    to{
+        fill: white;
+    }
+}
+
+.textwrapper path:nth-child(2){
+    animation-delay: 0.1s;
+}
+.textwrapper path:nth-child(3){
+    animation-delay: 0.2s;
+}
+.textwrapper path:nth-child(4){
+    animation-delay: 0.3s;
+}
+.textwrapper path:nth-child(5){
+    animation-delay: 0.4s;
+}
+.textwrapper path:nth-child(6){
+    animation-delay: 0.5s;
+}
+.textwrapper path:nth-child(7){
+    animation-delay: 0.6s;
+}
+.textwrapper path:nth-child(8){
+    animation-delay: 0.7s;
+}
+.textwrapper path:nth-child(9){
+    animation-delay: 0.8s;
+}
+
+/*3개의 선*/
+.line{
+    width: 263px;
+    height: 106px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FA682A;
+}
+
+.line path{
+    animation: light 0.2s linear forwards;
+    transform-origin: center;
+}
+
+@keyframes light {
+    from{
+        stroke-dasharray: 50;
+        transition-delay: 3s;
+    }
+    to{
+
+        stroke-dashoffset: 300;
+        animation-duration: 4s;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
