@@ -10,8 +10,17 @@ body{
     justify-content: center;
     align-items: center;
 }
+.wrapper{
+    width: 414px;
+    height: 896px;
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FA682A;
+}
 /*써니매직 로고*/
-.logowrapper {
+.logo {
     width: 263px;
     height: 106px;
     position: inherit;
@@ -22,27 +31,27 @@ body{
 }
 
 
-.logowrapper path{
+.logo path{
     animation: magic 0.8s linear forwards;
     transform-origin: center;
 }
 
 /*3:매직 4:써니 2:stroke 5:ㅅ*/
 
-.logowrapper path:nth-child(1){
+.logo path:nth-child(1){
     fill: white;
     stroke: #FF5733;
 
 }
 
-.logowrapper path:nth-child(2){
+.logo path:nth-child(2){
     stroke-dasharray: 100;
     stroke-dashoffset: 400;
     stroke: white;
     stroke-width: 1;
 }
 
-.logowrapper path:nth-child(3){
+.logo path:nth-child(3){
     fill: black;
 }
 
@@ -66,7 +75,7 @@ body{
 }
 
 /*태양이 돈이 되는 매직*/
-.textwrapper {
+.text {
     width: 246px;
     height: 36px;
     position: relative;
@@ -78,7 +87,7 @@ body{
     margin-left: 30px;
     size: 24px;
 }
-.textwrapper path{
+.text path{
     animation: end 0.2s linear forwards;
 }
 
@@ -88,28 +97,28 @@ body{
     }
 }
 
-.textwrapper path:nth-child(2){
+.text path:nth-child(2){
     animation-delay: 0.1s;
 }
-.textwrapper path:nth-child(3){
+.text path:nth-child(3){
     animation-delay: 0.2s;
 }
-.textwrapper path:nth-child(4){
+.textw path:nth-child(4){
     animation-delay: 0.3s;
 }
-.textwrapper path:nth-child(5){
+.text path:nth-child(5){
     animation-delay: 0.4s;
 }
-.textwrapper path:nth-child(6){
+.text path:nth-child(6){
     animation-delay: 0.5s;
 }
-.textwrapper path:nth-child(7){
+.text path:nth-child(7){
     animation-delay: 0.6s;
 }
-.textwrapper path:nth-child(8){
+.text path:nth-child(8){
     animation-delay: 0.7s;
 }
-.textwrapper path:nth-child(9){
+.text path:nth-child(9){
     animation-delay: 0.8s;
 }
 
@@ -132,7 +141,7 @@ body{
 @keyframes light {
     from{
         stroke-dasharray: 50;
-        transition-delay: 3s;
+        transition-delay: 1s;
     }
     to{
 
