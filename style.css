@@ -1,51 +1,49 @@
 @charset "utf-8";
-/**{*/
-/*    !*margin:0;*!*/
-/*    !*padding:0;*!*/
-/*    box-sizing: border-box;*/
-/*}*/
+*{
+    box-sizing: content-box;
+}
 
 .wrapper{
     width: 414px;
     height: 896px;
     position: inherit;
     display: flex;
-    justify-content: center;
     align-items: center;
     background-color: #FA682A;
 }
 
 .text {
     position: absolute;
-    width: 246px;
+    width: 230px;
     height: 36px;
     left: 90px;
     top: 267px;
-    margin-bottom: 300px;
     display: flex;
     border: unset;
     justify-content: center;
     align-items: center;
-    /*size: 24px;*/
     padding: 6px 10px 6px 10px ;
 }
 
 /*써니매직 로고*/
 .logo {
-    width: 263px;
-    height: 106px;
-    left: 76px;
+    padding-top: 3px;
+    padding-left: 1px;
+    left: 80px;
+    top: 330px;
     position: absolute;
     display: flex;
     border: unset;
-    margin-bottom: 150px;
     justify-content: center;
     align-items: center;
+    animation-delay: 1s;
 }
 
 .logo path{
-    animation: magic 0.8s linear forwards;
+    animation: magic 0.9s linear forwards;
+    animation-delay: 0.8s;
     transform-origin: center;
+    opacity: 0;
 }
 
 /*3:매직 4:써니 2:stroke 5:ㅅ*/
@@ -68,29 +66,32 @@
 }
 
 
+
 @keyframes magic {
     0%{
         fill: none;
     }
 
     50%{
-        nth-child(1).stroke-dasharray: 50;
-        nth-child(1).stroke-dashoffset: 50;
-        fill: none;
+
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
     }
 
     100%{
+        opacity: 1;
         stroke-dashoffset: 100;
         stroke: white;
+
     }
 }
 
 /*태양이 돈이 되는 매직*/
 .text path{
-    animation: end 0.2s linear forwards;
+    animation: write 0.03s linear forwards;
 }
 
-@keyframes end {
+@keyframes write {
     to{
         fill: white;
     }
@@ -125,37 +126,154 @@
 svg.line{
     width: 86px;
     height: 50px;
+    left: 155px;
+    top: 110px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 350px;
     stroke: white;
     stroke-width: 3px;
-    fill:transparent;
     stroke-dasharray: 630;
-    animation:stroke-ani 1s infinite;
+    animation:stroke-ani 1.5s linear forwards;
+    animation-delay: 1.6s;
+    opacity: 0;
 }
 
 @keyframes stroke-ani {
     from {
+
         stroke-dashoffset: 630;
     }
     to{
         stroke-dashoffset: 0;
+        opacity: 1;
     }
 }
 
 /*별*/
-.star{
-    margin-top: 300px;
-    margin-left: 100px;
+.star {
+    top: 520px;
+    left: 80px;
     position: absolute;
     animation: blink 1s infinite;
-    opacity: 0.3;
-    scale(0.9);
+    animation-delay: 1.6s;
+    opacity: 0;
+    scale: 0.9;
+    width: 10px;
+    height: 15px;
 }
 
+.star2 {
+    top: 580px;
+    left: 280px;
+    position: absolute;
+    animation: blink 1s infinite;
+    animation-delay: 1.6s;
+    opacity: 0;
+    scale: 0.9;
+    width: 10px;
+    height: 15px;
+}
+
+.star3 {
+    top: 490px;
+    left: 200px;
+    position: absolute;
+    animation: blink 1s infinite;
+    animation-delay: 1.6s;
+    opacity: 0;
+    scale: 0.9;
+    width: 10px;
+    height: 15px;
+}
+
+/*원*/
+.opacity_circle{
+    animation: circle_blink 2s infinite;
+    animation-delay: 1.6s;
+    position: absolute;
+    top: 487px;
+    left: 100px;
+    scale: 0.8;
+    opacity: 0;
+}
+
+/*타원*/
+.opacity_ellipse{
+    animation: circle_blink 1.8s infinite;
+    animation-delay: 1.6s;
+    position: absolute;
+    top: 600px;
+    left: 225px;
+    opacity: 0;
+}
+
+
+
+/*지폐*/
+svg.bill{
+    position:absolute;
+    top: 470px;
+    left: 100px;
+    animation: bounce 1s linear forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+    /*background-color: black;*/
+}
+
+/*동전*/
+svg.coin{
+    position: absolute;
+    top: 550px;
+    left: 100px;
+    animation: bounce 1s linear forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+/*집*/
+svg.house {
+    position:absolute;
+    top: 460px;
+    left: 250px;
+    animation: bounce 1s linear forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+/*손*/
+svg.hand{
+    position: absolute;
+    top: 590px;
+    left: 140px;
+    animation: turn 0.5s ease-in-out forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+/*위아래로 움직임*/
+@keyframes bounce {
+    to{
+        transform: translateY(40%);
+        opacity: 1;
+
+    }
+    from{
+        transform: translateY(0%);
+        opacity: 0;
+    }
+}
+
+/*회전*/
+@keyframes turn {
+    to{
+        transform: rotate(15deg);
+        opacity: 1;
+    }
+}
+
+/*깜빡임*/
 @keyframes blink {
     50% {
         opacity: 1;
@@ -163,64 +281,9 @@ svg.line{
     }
 }
 
-/*지폐*/
-svg.bill{
-    position:absolute;
-    margin-top: 100px;
-    margin-left: 4px;
-    margin-right:120px;
-    animation: bounce 1s linear infinite;
-    /*background-color: black;*/
-}
-
-/*동전*/
-svg.coin{
-    position: absolute;
-    margin-top: 140px;
-    margin-left: 40px;
-    animation: bounce 1s linear infinite;
-}
-
-/*집*/
-svg.house {
-    position:absolute;
-    margin-top: 90px;
-    margin-left: 90px;
-    animation: bounce 1s infinite ease;
-}
-
-/*손*/
-svg.hand{
-    position: absolute;
-    margin-top: 280px;
-    animation: turn 1s ease-in-out infinite;
-}
-
-@keyframes bounce {
-    to{
-        transform: translateY(40%);
-
+@keyframes circle_blink {
+    50%{
+        opacity: 0.4;
     }
-    from{
-        transform: translateY(0%);
-    }
+
 }
-
-@keyframes turn {
-    to{
-        transform: rotate(15deg);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
